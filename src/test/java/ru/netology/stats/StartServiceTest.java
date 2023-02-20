@@ -39,7 +39,7 @@ public class StartServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedSmall = 9;
         long actualSmall = service.smallSale(sales);
-        Assertions.assertEquals(expectedSmall, actualBig);
+        Assertions.assertEquals(expectedSmall, actualSmall);
     }
     @Test
     public void testamountmonthBelowTheAverage() {
@@ -51,10 +51,11 @@ public class StartServiceTest {
     }
     @Test
     public void testamountmonthAboveAverage() {
-    	StatsService service = new StatsService();
+        StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedAbove = 5;
         long actualAbove = service.amountmonthAboveAverage(sales);
         Assertions.assertEquals(expectedAbove, actualAbove);
+    }
 
 }
